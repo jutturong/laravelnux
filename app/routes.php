@@ -21,4 +21,6 @@ Route::get('test',function(){
     return  View::make('test');
 });
 
+Route::get('test/sub',array('uses'=>'MyController@index'));
+
 
