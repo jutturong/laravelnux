@@ -21,6 +21,8 @@ Route::get('test',function(){
     return  View::make('test');
 });
 
-Route::get('test/sub',array('uses'=>'MyController@index'));
+Route::get('test/sub',array('uses'=>'MyController@index'));  #show form submit
+
+Route::post('receive',array('uses'=>'MyController@create'));
 
 
