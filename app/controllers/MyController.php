@@ -7,7 +7,9 @@ class MyController extends \BaseController {
 	 *
 	 * @return Response
 	 */
-	public function index()
+    
+        protected  $layout="layout.master";
+        public function index()
 	{
 		//
                       return  View::make("test");
@@ -32,7 +34,11 @@ class MyController extends \BaseController {
                           echo  $email;
 	}
 
-
+public function showProfile()
+{
+    //$this->layout->content=View::make("test1.blade  ");
+     // return  View::make("test1.blade");
+}
 	/**
 	 * Store a newly created resource in storage.
 	 *

@@ -25,4 +25,14 @@ Route::get('test/sub',array('uses'=>'MyController@index'));  #show form submit
 
 Route::post('receive',array('uses'=>'MyController@create'));
 
+Route::get('testblade',function() #ทดสอบตัวอย่างการใช้ blade  file คือ  test1.blade.php
+        {
+           $view=View::make("test1",array("name"=>"jutturong charoenrit"))->with("age","34");
+            $view->location="Khonkaen";    
+            $view["specialty"]="PHP";
+           
+            return  $view;
+        });
+     
+
 
